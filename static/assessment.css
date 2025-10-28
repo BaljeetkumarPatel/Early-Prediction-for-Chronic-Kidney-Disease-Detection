@@ -1,0 +1,149 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+    color: #e0e0e0;
+    /* This centers the form in the middle of the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- 3D Form Card --- */
+.assessment-form-container {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    
+    /* 3D Effect Setup */
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+/* --- 3D Hover Effect --- */
+.assessment-form-container:hover {
+    transform: scale(1.03); /* Lifts up slightly */
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5), 
+                0 0 60px rgba(37, 99, 235, 0.3);
+    border-color: #2563eb;
+    /* Your script.js will handle the 3D tilt! */
+}
+
+/* --- Form Content Styling --- */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 10px 0;
+    background: linear-gradient(to right, #8e2de2, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form p {
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    font-weight: 1200;
+}
+
+/* --- Form Fields --- */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: black;
+    font-weight: 2000;
+    margin-bottom: 8px;
+}
+
+.form-group label i {
+    color: #2563eb;
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    background-color: #0b021d;
+    color: #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box; /* Important for padding */
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+.form-group input::placeholder {
+    color: #666;
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+/* --- Back Link --- */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+    z-index: 5;
+}
+
+.back-link:hover {
+    color: #ffffff;
+}

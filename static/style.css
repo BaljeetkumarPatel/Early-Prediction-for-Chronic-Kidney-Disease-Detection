@@ -1,0 +1,1124 @@
+Global
+body { 
+    margin: 0; 
+    font-family: Arial, sans-serif,'Poppins';
+    
+    background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+    
+     }
+section { padding: 60px 20px; text-align: center; }
+h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+/* Navbar */
+/* .navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 50px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top:0; z-index:100; }
+.navbar .logo-brand img { height: 50px; width: 50px; }
+.navbar .logo-brand span { font-weight: bold; font-size: 1.8rem; margin-left: 10px; }
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links li { cursor: pointer; transition: 0.3s; }
+.nav-links li:hover { color: #1d4ed8; } */
+
+/* --- Navbar Link Fixes --- */
+
+/* Remove underline and set default color */
+/* 🌌 NAVBAR CONTAINER */
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 12px 60px; 
+    background: linear-gradient(90deg, #0b032d, #1a0543); 
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🪐 BRAND / LOGO */
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-brand img { 
+    height: 50px; 
+    width: 50px; 
+    transition: transform 0.3s ease;
+}
+.logo-brand img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+.logo-brand span { 
+    font-weight: 700; 
+    font-size: 1.8rem; 
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* 🌠 NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 🧭 LINK STYLE */
+.nav-links li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* ✨ HOVER EFFECT */
+.nav-links li a:hover {
+    color: #6cb2f5;
+    background-color: rgba(108, 178, 245, 0.15);
+}
+
+/* 🚀 ACTIVE LINK STYLE */
+.nav-links li a.active {
+    color: #6cb2f5;
+    font-weight: 600;
+    border-bottom: 2px solid #6cb2f5;
+}
+
+/* 📱 RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        background: #0b032d;
+        width: 100%;
+        text-align: center;
+        display: none; /* hidden by default, can be toggled with JS */
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
+/* @media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+  }
+} */
+
+/* Hero Layout */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 2.5rem;
+  background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+button {
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+/* 3D Graphic Box */
+.hero-graphic {
+  width: 100%;
+  max-width: 600px;
+  perspective: 1000px;
+}
+
+.graphic-box {
+  width: 100%;
+  height: 20rem;
+  background: linear-gradient(to bottom right, #4ade80, #3b82f6);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: rotate(6deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-out;
+}
+
+/* Quote Styling */
+.quote-box {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  width: 80%;
+  line-height: 1.6;
+  animation: fadeInOut 5s infinite;
+}
+
+/* Smooth quote fade animation */
+@keyframes fadeInOut {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    padding: 5rem 6rem;
+  }
+
+  .hero-text {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+
+  .graphic-box {
+    height: 24rem;
+  }
+}
+
+/*2nd Section*/
+/* --- Section Styles --- */
+.ckd-section {
+    width: 100%;
+    max-width: 1400px; /* Made slightly wider for 4 columns */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: purple;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.section-description {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Card Grid (4x2 Layout) --- */
+.card-grid {
+    display: grid;
+    /* This creates 4 equal-width columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* --- Card Styles --- */
+.card {
+    background: #160a3a;
+    background: linear-gradient(to bottom right, #4ade80, #3b82f6);
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    border: 1px solid rgba(108, 178, 245, 0.2);
+    box-shadow: 0 0 5px rgba(108, 178, 245, 0.1);
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:#0b021d;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color:white;
+    line-height: 1.6;
+}
+
+/* --- HOVER EFFECTS (CSS) --- */
+.card:hover {
+    /* The strong neon-like glow */
+    box-shadow: 
+        0 0 10px rgba(108, 178, 245, 0.6),
+        0 0 25px rgba(108, 178, 245, 0.4),
+        0 0 50px rgba(108, 178, 245, 0.2);
+    
+    border-color: rgba(108, 178, 245, 0.8);
+    /* The 3D tilt is handled by JS, but 'scale' is here */
+}
+
+/* --- Responsiveness for the grid --- */
+@media (max-width: 992px) {
+    /* On tablets, stack in 2 columns */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* On mobile, stack in 1 column */
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*3rd section*/
+/* --- Prevention Section Styles --- */
+.prevention-section {
+    width: 100%;
+    max-width: 1000px; /* Adjust max-width as needed */
+    text-align: center;
+    margin: 60px auto; /* Adds spacing and centers the section */
+}
+
+.prevention-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #8e2de2;
+    background: linear-gradient(to right, #8e2de2, #4a00e0, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.prevention-section .section-subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* --- Protocol Container (The Timeline itself) --- */
+.protocol-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Vertical connecting line */
+.protocol-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #4a00e0; /* Main line color */
+    z-index: 0; /* Behind the cards and dots */
+}
+
+/* --- Protocol Items (Left/Right Cards) --- */
+.protocol-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px; /* Space between items */
+    position: relative;
+    z-index: 1; /* Above the line */
+}
+
+/* --- NEW DOT STYLING (Replaces all ::after rules) --- */
+.timeline-dot {
+    /* 1. Dot Size */
+    width: 60px;
+    height: 60px;
+    
+    /* 2. Dot Position (The Fix) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* 3. Icon Centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 4. Dot Styling */
+    background-color: #2563eb; 
+    border: 4px solid #0b021d; /* Matches background */
+    border-radius: 50%;
+    z-index: 2; /* Above the line and cards */
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.8);
+}
+
+.timeline-dot i {
+    font-size: 24px; /* Icon size */
+    color: #ffffff;   /* Icon color */
+}
+
+/* --- CARD SPACING (The Fix) --- */
+.protocol-item.left {
+    justify-content: flex-start;
+    /* Pushes card left, leaving space for dot (60px) + padding (30px) */
+    padding-right: calc(50% + 45px); 
+}
+
+.protocol-item.right {
+    justify-content: flex-end;
+    /* Pushes card right, leaving space for dot (60px) + padding (30px) */
+    padding-left: calc(50% + 45px);
+}
+
+
+/* --- Card Specifics within the Timeline Layout --- */
+.protocol-item .card {
+    background: linear-gradient(to bottom right, #4ade80, #3b82f6);
+    border-radius: 1.5rem;
+    transform: rotate(6deg);
+    padding: 30px;
+    text-align: left;
+    max-width: 450px; 
+    width: 100%; 
+    border: 1px solid rgba(37, 99, 235, 0.2); 
+    box-shadow: 0 15 30px rgba(37, 99, 235, 0.1); 
+    transition: all 0.4s ease, transform 0.1s linear;
+    transform-style: preserve-3d; 
+    position: relative;
+    z-index: 1;
+    cursor: pointer; 
+}
+
+.protocol-item .card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2563eb; 
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.7); 
+}
+
+.protocol-item .card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black; /* White text */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.protocol-item .card p {
+    font-size: 0.95rem;
+    color:white; /* Slightly off-white text */
+    line-height: 1.6;
+}
+
+/* --- HOVER EFFECTS (CSS) for Cards --- */
+.protocol-item .card:hover {
+    box-shadow: 
+        0 0 10px rgba(37, 99, 235, 0.7),   /* Inner glow */
+        0 0 30px rgba(37, 99, 235, 0.5),   /* Mid glow */
+        0 0 60px rgba(37, 99, 235, 0.3);   /* Outer, diffused glow */
+    
+    border-color: rgba(37, 99, 235, 1); /* Solid, vibrant border */
+    transform: perspective(1000px) scale(1.05) rotateX(0) rotateY(0); 
+}
+
+
+/* --- Responsiveness for the new layout --- */
+@media (max-width: 768px) {
+    .prevention-section {
+        max-width: 600px;
+    }
+
+    .protocol-container::before {
+        left: 20px; /* Move line to left */
+        transform: translateX(0);
+    }
+
+    .timeline-dot {
+        /* Moves dot to the left line */
+        left: -10px; /* (Dot width 60px / 2) - line position 20px = -10px? No, left: -10px relative to item */
+        left: calc(20px - 30px); /* (Line Position - Dot Radius) */
+        transform: translateY(-50%); /* Reset horizontal transform */
+    }
+
+    .protocol-item {
+        justify-content: flex-start; /* All items aligned left */
+        padding-left: 0; 
+        padding-right: 0;
+        margin-left: 65px; /* Space for line (20px) + dot (60px/2) + gap */
+    }
+
+    .protocol-item.left,
+    .protocol-item.right {
+        padding-left: 0; /* Remove specific left/right padding */
+        padding-right: 0;
+    }
+
+    .protocol-item .card {
+        max-width: none; /* Allow card to take full available width */
+    }
+    
+    .prevention-section .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .protocol-container::before {
+        left: 15px;
+    }
+    
+    .timeline-dot {
+        left: calc(15px - 30px); /* (Line Position - Dot Radius) */
+        width: 50px;  /* Slightly smaller dot */
+        height: 50px;
+    }
+    
+    .timeline-dot i {
+        font-size: 20px; /* Smaller icon */
+    }
+    
+    .protocol-item {
+        margin-left: 55px; /* Adjust spacing */
+    }
+
+    .protocol-item .card {
+        padding: 20px;
+    }
+    .protocol-item .card h3 {
+        font-size: 1.3rem;
+    }
+    .protocol-item .card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* 4th Section */
+/* --- Key Risk Factors Section --- */
+.risk-factors-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto; /* Adds space and centers */
+    text-align: center;
+    background-color: #f8f9fa; /* Light background as in image */
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 5rem 2.5rem;
+    background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+}
+
+.risk-factors-section .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333; /* Darker text for light background */
+    margin-bottom: 10px;
+}
+
+.risk-factors-section .section-subtitle {
+    font-size: 1rem;
+    color: black; /* Slightly lighter text */
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.risk-factors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 30px;
+}
+
+/* --- Risk Card Styling --- */
+.risk-card {
+    background-color: #fff; /* White card background */
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease; /* For smooth non-JS transitions */
+    transform-style: preserve-3d; /* ESSENTIAL for JS 3D effect */
+    cursor: pointer;
+    border: 1px solid #eee; /* Light border */
+}
+
+.risk-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    /* JS will handle the transform scale and rotate */
+}
+
+.risk-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #e0f2f7; /* Light blue background for icon */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.risk-icon i {
+    font-size: 32px;
+    color: #2196f3; /* Blue icon color */
+}
+
+.risk-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color:black;
+    margin-bottom: 10px;
+}
+
+.risk-card p {
+    font-size: 0.9rem;
+    color:white;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Responsive for Risk Factors Section --- */
+@media (max-width: 992px) {
+    .risk-factors-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .risk-factors-section {
+        padding: 40px 15px;
+    }
+    .risk-factors-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .risk-factors-section .section-title {
+        font-size: 1.8rem;
+    }
+    .risk-card {
+        padding: 25px 15px;
+    }
+}
+
+/* 5th Section */
+/* --- Educational Library Section --- */
+.library-section {
+    width: 100%;
+    max-width: 1200px; /* Or your preferred max-width */
+    margin: 60px auto;
+    padding: 0 20px; /* Add padding for space on mobile */
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+.library-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #8e2de2;
+    background: linear-gradient(to right, #8e2de2, #4a00e0, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.library-section .section-subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+/* --- Horizontal Scrolling Container --- */
+.video-scroll-container {
+    display: flex;
+    overflow-x: auto; /* This enables horizontal scrolling */
+    gap: 30px;
+    padding: 20px; /* Adds space around the cards */
+    margin: 0 -20px; /* Extends to screen edges to feel right */
+    
+    /* Hides scrollbar for a cleaner look (optional) */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Hides scrollbar for Chrome, Safari, Opera */
+.video-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Video Card Styling --- */
+.video-card {
+    display: block;
+    text-decoration: none;
+    min-width: 350px; /* Gives each card a set width */
+    max-width: 350px;
+    background-color: #2563eb; /* Your requested background color */
+    border-radius: 15px;
+    overflow: hidden; /* Clips the thumbnail to the rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    
+    transform-style: preserve-3d; /* ESSENTIAL for 3D effect */
+    transition: all 0.3s ease;
+}
+
+/* --- Hover Effect (Glow & Scale) --- */
+.video-card:hover {
+    transform: scale(1.05); /* Increases size */
+    /* Fading border glow */
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.7), 
+                0 0 60px rgba(37, 99, 235, 0.4);
+    /* JS will handle the 3D tilt */
+}
+
+.video-thumbnail {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Gradient is set inline in the HTML */
+}
+
+.play-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb; /* Blue play icon */
+    font-size: 24px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.video-card:hover .play-icon {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.video-content {
+    padding: 25px;
+}
+
+.video-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff; /* White text (as per image) */
+    margin: 0 0 10px 0;
+}
+
+.video-content p {
+    font-size: 0.95rem;
+    color: #e0e0e0; /* Light gray text (as per image) */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*  6th section */
+/* --- Early Detection CTA Section --- */
+.detection-cta-section {
+    width: 100%;
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 80px 20px;
+    margin: 60px auto;
+}
+
+.cta-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Left column slightly wider */
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Column 1: Content --- */
+.cta-content .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111827; /* Dark text */
+    margin-bottom: 15px;
+    text-align: left;
+    /* Resetting gradient from other sections */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+.cta-content .section-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.benefits-list li i {
+    color: #28a745; /* Green checkmark */
+    font-size: 1.3rem;
+    margin-right: 12px;
+}
+
+/* --- Column 2: The 3D CTA Box --- */
+.cta-box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    /* 3D Effect Setup */
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+}
+
+/* --- 3D Hover Effect (Glow & Scale) --- */
+.cta-box.card:hover {
+    transform: scale(1.05); /* Lifts up */
+    /* Glowing effect */
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5), 
+                0 0 60px rgba(37, 99, 235, 0.3), 
+                0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Your script.js will add the 3D tilt! */
+}
+
+.cta-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 15px 0;
+}
+
+.cta-box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- The Clickable Button --- */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #2563eb, #14b8a6); /* Blue to Teal gradient */
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 30px; /* Pill shape */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.cta-button i {
+    margin-right: 8px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px); /* Lifts button up */
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6); /* Stronger shadow */
+}
+
+.cta-footer {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .cta-container {
+        grid-template-columns: 1fr; /* Stack on tablet/mobile */
+        gap: 40px;
+    }
+    
+    .cta-content .section-title,
+    .cta-content .section-subtitle {
+        text-align: center;
+    }
+    
+    .benefits-list {
+        display: inline-block; /* Center the list block */
+        text-align: left; /* Keep text inside left-aligned */
+    }
+}
+
+/* Footer */
+/* --- Site Footer --- */
+.site-footer {
+    /*background-color: #0b021d;*/ /* Dark background from your theme */
+    color: #b0b0b0;
+    padding: 0px 20px 0 0px;
+    margin-top: 60px; /* Space above the footer */
+    border-top: 1px solid rgba(37, 99, 235, 0.3);
+    padding: 5rem 2.5rem;
+    background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; /* 4 columns, first is wider */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    
+}
+
+/* --- Column 1: Company & Socials --- */
+.footer-column-1 .footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(to right, #8e2de2, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 15px 0;
+}
+
+.footer-column-1 p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.social-icon-list {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #160a3a;
+    border-radius: 50%;
+    color: #b0b0b0;
+    font-size: 18px;
+    text-decoration: none;
+    
+    transform-style: preserve-3d; /* ESSENTIAL for 3D effect */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+/* --- 3D Hover Effect for Social Icons --- */
+.social-icon-link.card:hover {
+    color: #ffffff;
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: scale(1.15); /* Lifts up */
+    /* Fading glow */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.7),
+                0 0 40px rgba(37, 99, 235, 0.4);
+    /* Your script.js adds the 3D tilt! */
+}
+
+/* --- Columns 2, 3, 4: Link Lists --- */
+.footer-column-2 h4,
+.footer-column-3 h4,
+.footer-column-4 h4,
+.footer-column-5 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.footer-column-2 ul,
+.footer-column-3 ul,
+.footer-column-4 ul,
+.footer-column-5 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Space between legal/company lists */
+}
+
+.footer-column-2 li,
+.footer-column-3 li,
+.footer-column-4 li,
+.footer-column-5 li {
+    margin-bottom: 12px;
+}
+
+.footer-column-2 a,
+.footer-column-3 a,
+.footer-column-4 a,
+.footer-column-5 a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+/* --- Interactive Link Hover --- */
+.footer-column-2 a:hover,
+.footer-column-3 a:hover,
+.footer-column-4 a:hover,
+.footer-column-5 a:hover {
+    color:white;
+    padding-left: 5px; /* Pushes text slightly */
+}
+
+a.footer-cta-link {
+    color: #25b8eb; /* Standout color */
+    font-weight: 600;
+}
+a.footer-cta-link:hover {
+    color: #fff;
+    background: #25b8eb;
+    padding-left: 5px;
+    border-radius: 3px;
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom-bar {
+    border-top: 1px solid rgba(37, 99, 235, 0.3);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: black;
+}
+
+.made-by-tag {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+.made-by-tag strong {
+    font-weight: 700;
+}
+
+/* --- Responsive for Footer --- */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr; /* 2x2 grid on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

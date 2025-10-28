@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="result-container">
+            <h2 class='container-heading'><span class="heading_font">Chronic Kidney Disease</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    </div>
+
+    <div class="result-container card cta-box">
+        
+        {% if is_high_risk %}
+            <div class="icon-wrapper risk">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2>High Risk Detected</h2>
+            <p>Our analysis indicates a high probability of Chronic Kidney Disease based on the provided data. Please consult a healthcare professional for a complete diagnosis and guidance.</p>
+        
+        {% else %}
+            <div class="icon-wrapper safe">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Low Risk Detected</h2>
+            <p>Our analysis indicates a low probability of Chronic Kidney Disease based on the provided data. We still recommend regular check-ups and maintaining a healthy lifestyle.</p>
+        
+        {% endif %}
+        
+        {% if confidence_score is not none %}
+            <div class="confidence-score">
+                <p><strong>Model Confidence:</strong> {{ confidence_score }}%</p>
+            </div>
+        {% endif %}
+
+        <a href="{{ url_for('prediction') }}" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Run New Assessment
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

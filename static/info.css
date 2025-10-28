@@ -1,0 +1,386 @@
+/* -----------------------------
+   Global Styles
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+  color: #1e293b;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* -----------------------------
+   Navbar (optional consistency)
+------------------------------ */
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 12px 60px; 
+    background: linear-gradient(90deg, #0b032d, #1a0543); 
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🪐 BRAND / LOGO */
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-brand img { 
+    height: 50px; 
+    width: 50px; 
+    transition: transform 0.3s ease;
+}
+.logo-brand img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+.logo-brand span { 
+    font-weight: 700; 
+    font-size: 1.8rem; 
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* 🌠 NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 🧭 LINK STYLE */
+.nav-links li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* ✨ HOVER EFFECT */
+.nav-links li a:hover {
+    color: #6cb2f5;
+    background-color: rgba(108, 178, 245, 0.15);
+}
+
+/* 🚀 ACTIVE LINK STYLE */
+.nav-links li a.active {
+    color: #6cb2f5;
+    font-weight: 600;
+    border-bottom: 2px solid #6cb2f5;
+}
+
+/* 📱 RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        background: #0b032d;
+        width: 100%;
+        text-align: center;
+        display: none; /* hidden by default, can be toggled with JS */
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* -----------------------------
+   Hero Section
+------------------------------ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 2.5rem;
+  background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+  border-radius: 80px 80px 80px 80px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.hero img {
+  width: 420px;
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.3));
+  transform: perspective(800px) rotateY(-5deg);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hero img:hover {
+  transform: perspective(800px) rotateY(0deg) scale(1.05);
+  filter: drop-shadow(0 0 35px rgba(50, 100, 200, 0.5));
+}
+
+/* -----------------------------
+   Section Container
+------------------------------ */
+.section {
+  padding: 80px 100px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title i {
+  color: #2563eb;
+  font-size: 1.8rem;
+}
+
+.section-content {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.section-content p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+/* -----------------------------
+   Icon Styles (Font Awesome)
+------------------------------ */
+.icon {
+  color: #2563eb;
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+/* -----------------------------
+   Footer
+------------------------------ */
+/* Footer */
+/* --- Site Footer --- */
+.site-footer {
+    /*background-color: #0b021d;*/ /* Dark background from your theme */
+    color: #b0b0b0;
+    padding: 0px 20px 0 0px;
+    margin-top: 60px; /* Space above the footer */
+    border-top: 1px solid rgba(37, 99, 235, 0.3);
+    padding: 5rem 2.5rem;
+    background: linear-gradient(to right, #bfdbfe, #bbf7d0);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; /* 4 columns, first is wider */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    
+}
+
+/* --- Column 1: Company & Socials --- */
+.footer-column-1 .footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(to right, #8e2de2, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 15px 0;
+}
+
+.footer-column-1 p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.social-icon-list {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #160a3a;
+    border-radius: 50%;
+    color: #b0b0b0;
+    font-size: 18px;
+    text-decoration: none;
+    
+    transform-style: preserve-3d; /* ESSENTIAL for 3D effect */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+/* --- 3D Hover Effect for Social Icons --- */
+.social-icon-link.card:hover {
+    color: #ffffff;
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: scale(1.15); /* Lifts up */
+    /* Fading glow */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.7),
+                0 0 40px rgba(37, 99, 235, 0.4);
+    /* Your script.js adds the 3D tilt! */
+}
+
+/* --- Columns 2, 3, 4: Link Lists --- */
+.footer-column-2 h4,
+.footer-column-3 h4,
+.footer-column-4 h4,
+.footer-column-5 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.footer-column-2 ul,
+.footer-column-3 ul,
+.footer-column-4 ul,
+.footer-column-5 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Space between legal/company lists */
+}
+
+.footer-column-2 li,
+.footer-column-3 li,
+.footer-column-4 li,
+.footer-column-5 li {
+    margin-bottom: 12px;
+}
+
+.footer-column-2 a,
+.footer-column-3 a,
+.footer-column-4 a,
+.footer-column-5 a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+/* --- Interactive Link Hover --- */
+.footer-column-2 a:hover,
+.footer-column-3 a:hover,
+.footer-column-4 a:hover,
+.footer-column-5 a:hover {
+    color:white;
+    padding-left: 5px; /* Pushes text slightly */
+}
+
+a.footer-cta-link {
+    color: #25b8eb; /* Standout color */
+    font-weight: 600;
+}
+a.footer-cta-link:hover {
+    color: #fff;
+    background: #25b8eb;
+    padding-left: 5px;
+    border-radius: 3px;
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom-bar {
+    border-top: 1px solid rgba(37, 99, 235, 0.3);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: black;
+}
+
+.made-by-tag {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+.made-by-tag strong {
+    font-weight: 700;
+}
+
+/* --- Responsive for Footer --- */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr; /* 2x2 grid on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

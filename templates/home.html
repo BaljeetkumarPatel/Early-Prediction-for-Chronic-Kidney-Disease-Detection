@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predict CKD</title>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo-brand">
+    <!-- <img src="logo.png" alt="Logo"> -->
+     <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    <span>Predict CKD</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    
+    <li><a href="{{ url_for('info') }}">Info</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+
+    <li><a href="#prevention">Prevention</a></li>
+    <li><a href="#video">Video</a></li>
+</ul>
+</nav>
+
+<section class="hero-section">
+    <!-- Text Content -->
+    <div class="hero-text">
+      <h1>Predict Chronic Kidney Diseases Before It's Critical</h1>
+      <p>Next-generation AI technology for early detection and prevention of Chronic Kidney Disease. Your health, reimagined.</p>
+      <div class="hero-buttons">
+        <!-- <button class="btn-primary">Start Analysis</button> -->
+        <button type="button" class="btn-primary" onclick="window.location.href='assessment.html'">
+            Start Analysis
+        </button>
+        <!-- <button class="btn-secondary">Learn More</button> -->
+
+        <button type="button" class="btn-secondary" onclick="document.getElementById('prevention').scrollIntoView({ behavior: 'smooth' });">
+            Learn More
+       </button>
+
+
+      </div>
+    </div>
+
+    <!-- 3D Background Element with Moving Quotes -->
+    <div class="hero-graphic" id="tilt-box">
+      <div class="graphic-box">
+        <div class="quote-box" id="quoteBox">"Early prediction saves lives."</div>
+      </div>
+    </div>
+  </section>
+
+  <!--2nd Section-->
+ <section class="ckd-section">
+    <h2 class="section-title">UNDERSTANDING CKD</h2>
+    <p class="section-subtitle">Comprehensive knowledge for better health decisions</p>
+    <p class="section-description">
+        Next-generation AI technology for early detection and prevention of Chronic Kidney Disease.
+        Your health, reimagined.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="icon">🧬</div>
+        <h3>What is CKD?</h3>
+        <p>A progressive condition where kidneys lose filtering ability over time. Our AI detects early signs before symptoms appear.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚠️</div>
+        <h3>Risk Factors</h3>
+        <p>Diabetes, hypertension, obesity, smoking, and genetics. Our system analyzes 50+ parameters to assess your risk profile.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔬</div>
+        <h3>Early Symptoms</h3>
+        <p>Fatigue, swelling, urination changes, nausea. ML algorithms detect subtle patterns in your health data.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💧</div>
+        <h3>Prevention</h3>
+        <p>Stay hydrated, maintain a balanced diet, exercise regularly, and monitor blood sugar and pressure levels.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>AI Insights</h3>
+        <p>Our AI provides personalized health analytics and risk prediction to guide proactive healthcare decisions.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Track Progress</h3>
+        <p>Monitor kidney function trends over time through intelligent dashboards and predictive health metrics.</p>
+      </div>
+      
+      <div class="card">
+        <div class="icon">🩺</div>
+        <h3>Treatment</h3>
+        <p>Options include medication, dialysis, and transplant. Early intervention is key to managing the condition effectively.</p>
+      </div>
+      
+      <div class="card">
+        <div class="icon">🥗</div>
+        <h3>Lifestyle Mgmt</h3>
+        <p>Manage CKD with a renal-friendly diet, stress reduction, and close cooperation with your healthcare team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--3rd Section-->
+  <section class="prevention-section" id="prevention">
+    <h2 class="section-title">PREVENTION PROTOCOL</h2>
+    <p class="section-subtitle">Evidence-based strategies for kidney health</p>
+
+    <div class="protocol-container">
+        
+        <div class="protocol-item left">
+            <div class="card">
+                <div class="icon">💧</div>
+                <h3>Hydration Optimization</h3>
+                <p>Maintain 2-3 liters daily water intake. Proper hydration helps kidneys flush toxins and maintain optimal function.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-tint"></i> </div>
+        </div>
+
+        <div class="protocol-item right">
+            <div class="card">
+                <div class="icon">🥗</div>
+                <h3>Nutritional Balance</h3>
+                <p>Low sodium, controlled protein, high fiber diet. Reduce processed foods and focus on whole grains, fruits, vegetables.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-seedling"></i> </div>
+        </div>
+
+        <div class="protocol-item left">
+            <div class="card">
+                <div class="icon">🏃</div>
+                <h3>Regular Exercise</h3>
+                <p>Engage in at least 30 minutes of moderate activity most days. Exercise improves circulation and overall kidney health.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-seedling"></i> </div>
+        </div>
+
+        <div class="protocol-item right">
+            <div class="card">
+                <div class="icon">🩸</div>
+                <h3>Blood Pressure Control</h3>
+                <p>Keep blood pressure within healthy limits through diet, exercise, and medication if needed. High BP damages kidneys.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-seedling"></i> </div>
+        </div>
+
+        <div class="protocol-item left">
+            <div class="card">
+                <div class="icon">🍬</div>
+                <h3>Blood Sugar Management</h3>
+                <p>Crucial for diabetics to prevent kidney damage. Monitor levels closely and adhere to treatment plans.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-seedling"></i> </div>
+        </div>
+
+        <div class="protocol-item right">
+            <div class="card">
+                <div class="icon">🚭</div>
+                <h3>Avoid Smoking</h3>
+                <p>Smoking severely impacts kidney function and accelerates damage. Quitting is a vital step for kidney health.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-seedling"></i> </div>
+        </div>
+
+        <div class="protocol-item left">
+            <div class="card">
+                <div class="icon">💊</div>
+                <h3>Medication Awareness</h3>
+                <p>Be cautious with NSAIDs and other nephrotoxic drugs. Consult your doctor about kidney-safe alternatives.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-seedling"></i> </div>
+        </div>
+
+        <div class="protocol-item right">
+            <div class="card">
+                <div class="icon">🗓️</div>
+                <h3>Regular Check-ups</h3>
+                <p>Annual physicals with kidney function tests are important, especially if you have risk factors.</p>
+            </div>
+            <div class="timeline-dot">
+            <i class="fas fa-seedling"></i> </div>
+        </div>
+    </div>
+</section>
+
+<!--4th Section-->
+<section class="risk-factors-section">
+    <h2 class="section-title">Key Risk Factors</h2>
+    <p class="section-subtitle">Understanding your risk factors is the first step toward prevention and early detection.</p>
+
+    <div class="risk-factors-grid">
+        
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-heartbeat"></i> </div>
+            <h3>Diabetes</h3>
+            <p>High blood sugar levels can damage kidney blood vessels.</p>
+        </div>
+
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-chart-line"></i> </div>
+            <h3>High Blood Pressure</h3>
+            <p>Hypertension is a leading cause of kidney damage.</p>
+        </div>
+
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-users"></i> </div>
+            <h3>Family History</h3>
+            <p>Genetic predisposition increases CKD risk.</p>
+        </div>
+
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-hourglass-half"></i> </div>
+            <h3>Age Factor</h3>
+            <p>Risk increases with age, especially after 60.</p>
+        </div>
+
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-smoking"></i>
+            </div>
+            <h3>Smoking</h3>
+            <p>Damages blood vessels, reducing blood flow to the kidneys.</p>
+        </div>
+
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-weight"></i>
+            </div>
+            <h3>Obesity</h3>
+            <p>Increases the risk of diabetes and high blood pressure.</p>
+        </div>
+        
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-pills"></i>
+            </div>
+            <h3>Certain Medications</h3>
+            <p>Long-term use of some drugs can harm kidney function.</p>
+        </div>
+
+        <div class="risk-card card">
+            <div class="risk-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+            <h3>Ethnicity</h3>
+            <p>Certain ethnic groups have a higher predisposition.</p>
+        </div>
+
+    </div>
+</section>
+<!-- 5th Section -->
+ <section class="library-section" id="video">
+    <h2 class="section-title">EDUCATIONAL LIBRARY</h2>
+    <p class="section-subtitle">Expert insights and patient stories</p>
+
+    <div class="video-scroll-container">
+        <a href="https://youtu.be/G3_iuZTgKoQ?si=nq-xYuJ_dXHSd3GT" target="_blank"   
+   rel="noopener" class="video-card">
+            <div class="video-thumbnail" style="background: linear-gradient(135deg, #a03cff, #2563eb);">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-content">
+                <h3>Understanding CKD</h3>
+                <p>Comprehensive guide covering causes, stages, and progression of chronic kidney disease.</p>
+            </div>
+        </a>
+
+        <a href="https://youtu.be/WlinbaOptz8?si=m5DLPQ1KS2mgV58T" rel="noopener" target="_blank" class="video-card">
+            <div class="video-thumbnail" style="background: linear-gradient(135deg, #ff3c83, #a03cff);">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-content">
+                <h3>Kidney-Friendly Nutrition</h3>
+                <p>Dietary strategies and meal plans optimized for kidney health and disease management.</p>
+            </div>
+        </a>
+
+        <a href="https://youtu.be/Yl0MpQ1w5zk?si=E0bvbHmkhGBwb1fr" rel="noopener" target="_blank" class="video-card">
+            <div class="video-thumbnail" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-content">
+                <h3>Living with Dialysis</h3>
+                <p>Patient stories and expert advice on managing life while on dialysis treatment.</p>
+            </div>
+        </a>
+        
+        <a href="https://youtu.be/wDIykJfU8K4?si=3rN-yYqmOKvNgEgz" rel="noopener" target="_blank" class="video-card">
+            <div class="video-thumbnail" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-content">
+                <h3>Medication Management</h3>
+                <p>Learn about common medications for CKD, their purpose, and potential side effects.</p>
+            </div>
+        </a>
+        
+        <a href="https://youtu.be/XbvyUztNmmk?si=B4vw6NxjrmZcRQZi" rel="noopener" target="_blank" class="video-card">
+            <div class="video-thumbnail" style="background: linear-gradient(135deg, #f7b733, #fc4a1a);">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-content">
+                <h3>Mental Health & CKD</h3>
+                <p>Coping strategies for the emotional and psychological challenges of a chronic diagnosis.</p>
+            </div>
+        </a>
+    </div>
+</section>
+<!-- 6th Section -->
+ <section class="detection-cta-section">
+    <div class="cta-container">
+        
+        <div class="cta-content">
+            <h2 class="section-title">Why Early Detection Matters</h2>
+            <p class="section-subtitle">
+                Our AI-powered prediction system helps identify CKD before 
+                symptoms appear, giving you the opportunity to take preventive 
+                action.
+            </p>
+            
+            <ul class="benefits-list">
+                <li><i class="fas fa-check-circle"></i> Early detection saves lives</li>
+                <li><i class="fas fa-check-circle"></i> Prevent progression to kidney failure</li>
+                <li><i class="fas fa-check-circle"></i> Reduce healthcare costs</li>
+                <li><i class="fas fa-check-circle"></i> Improve quality of life</li>
+                <li><i class="fas fa-check-circle"></i> Personalized treatment plans</li>
+                <li><i class="fas fa-check-circle"></i> Peace of mind through screening</li>
+            </ul>
+        </div>
+
+        <div class="cta-box card">
+            <h3>Ready to Check Your Risk?</h3>
+            <p>
+                Take our comprehensive risk assessment and get personalized 
+                recommendations for maintaining optimal kidney health.
+            </p>
+            
+            <a href="#assessment-tool" class="cta-button">
+                <i class="fas fa-play-circle"></i> 
+                Start Your Assessment
+            </a>
+            
+            <p class="cta-footer">Free • Confidential • Takes 5 minutes</p>
+        </div>
+
+    </div>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- Column 1: Company & Socials -->
+        <div class="footer-column-1">
+            <h3 class="footer-logo">KidneyClear AI</h3>
+            <p>Our AI-powered platform provides early-stage chronic kidney disease detection and personalized risk management.</p>
+            <div class="social-icon-list">
+                
+                <a href="#" target="_blank" class="social-icon-link card" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" class="social-icon-link card" aria-label="X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" target="_blank" class="social-icon-link card" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" target="_blank" class="social-icon-link card" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Column 2: Platform -->
+        <div class="footer-column-2">
+            <h4>Our Platform</h4>
+            <ul>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">For Patients</a></li>
+                <li><a href="#">For Healthcare Providers</a></li>
+                <li><a href="#">Our Technology</a></li>
+                <!-- <li><a href="#" class="footer-cta-link">Start Risk Assessment</a></li> -->
+            </ul>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-column-3">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">What is CKD?</a></li>
+                <li><a href="#">Prevention Protocol</a></li>
+                <li><a href="#">Educational Library</a></li>
+                <li><a href="#">Blog & News</a></li>
+                <li><a href="#">Patient Stories</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Company & Legal -->
+        <div class="footer-column-4">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Press & Media</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            
+        </div>
+        <!-- Column 5: Legal -->
+        <div class="footer-column-5">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">HIPAA Compliance</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+
+    </div>
+    
+    <div class="footer-bottom-bar">
+        <p>&copy; 2025 KidneyClear AI. All rights reserved. This information is for educational purposes and not a substitute for professional medical advice.</p>
+        <div class="made-by-tag">
+            <span>Made by</span> <strong>BKP and SA</strong>
+        </div>
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
