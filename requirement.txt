@@ -3,3 +3,7 @@ seaborn
 missingno
 tensorflow
 flask
+gunicorn
+pandas
+numpy
+joblib
