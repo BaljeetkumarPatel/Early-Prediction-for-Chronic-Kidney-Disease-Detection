@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Predict CKD</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact Us - Predict CKD</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='info.css') }}">
 </head>
 <body>
 
@@ -17,17 +19,157 @@
       <ul class="nav-links">
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('info') }}">Info</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        
-        <li><a href="{{ url_for('home') }}#precaution">Prevention</a></li>
-        <li><a href="{{ url_for('home') }}#video">Video</a></li>
+        <li><a href="{{ url_for('contact') }}" style="color: #4dd0e1;">Contact</a></li> 
+        <li><a href="{{ url_for('home') }}#precautions">Prevention</a></li>
+        <li><a href="{{ url_for('home') }}#history">History</a></li> 
       </ul>
     </nav>
 
-    <section style="color: #333; background: #fff; padding: 60px 20px;">
-        <h2>Contact Us</h2>
-        <p>This page will contain your contact form or details.</p>
+    <section class="hero">
+      <div class="hero-text">
+        <h1><i class="fa-solid fa-envelope-open-text"></i> Get In Touch</h1>
+        <p>
+          We're here to help. Whether you have a question about our project, 
+          need support, or want to collaborate, please reach out to us.
+        </p>
+      </div>
+      <div class="hero-icon-container" style="font-size: 10em; color: #4dd0e1; text-align: center; flex-basis: 30%;">
+        <i class="fa-solid fa-headset"></i>
+      </div>
     </section>
+
+    <section class="section" id="contact-main">
+        <h2 class="section-title"><i class="fa-solid fa-address-book"></i> Contact Information & Form</h2>
+        <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 40px;">
+
+            <div class="contact-info" style="flex: 1; min-width: 300px;">
+                <p>You can reach us directly through the following channels. We look forward to hearing from you.</p>
+                
+                <ul class="info-list" style="list-style: none; padding-left: 0; margin-top: 20px;">
+                    <li style="font-size: 1.1em; margin-bottom: 20px; display: flex; align-items: flex-start;">
+                        <i class="fa-solid fa-map-marker-alt" style="width: 30px; margin-top: 5px; color: #007BFF;"></i>
+                        <span>
+                            <strong>Address:</strong><br>
+                            123 Health Tech Avenue, Bengaluru, KA 560001, India
+                        </span>
+                    </li>
+                    <li style="font-size: 1.1em; margin-bottom: 20px; display: flex; align-items: flex-start;">
+                        <i class="fa-solid fa-envelope" style="width: 30px; margin-top: 5px; color: #007BFF;"></i>
+                        <span>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@predictckd.com" style="color: #007BFF; text-decoration: none;">info@predictckd.com</a>
+                        </span>
+                    </li>
+                    <li style="font-size: 1.1em; margin-bottom: 20px; display: flex; align-items: flex-start;">
+                        <i class="fa-solid fa-phone-alt" style="width: 30px; margin-top: 5px; color: #007BFF;"></i>
+                        <span>
+                            <strong>Phone:</strong><br>
+                            +91 987 654 3210
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form-container" style="flex: 2; min-width: 300px;">
+                <form id="contactForm" action="/submit-contact" method="POST">
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label for="subject" style="display: block; margin-bottom: 5px; font-weight: bold;">Subject</label>
+                        <input type="text" id="subject" name="subject" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
+                        <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit;"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="background-color: #007BFF; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; font-weight: bold;">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="map">
+        <h2 class="section-title"><i class="fa-solid fa-location-dot"></i> Our Location</h2>
+        <div class="section-content" style="text-align: center;">
+            <p>Find us at our office in Bengaluru.</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124385.50970034426!2d77.51268481541018!3d13.034789880196726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf80b01713363351d!2sBMS%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin!4v1729883584857!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style="border:0; border-radius: 8px; margin-top: 20px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column-1">
+          <h3 class="footer-logo">KidneyClear AI</h3>
+          <p>Our AI-powered platform provides early-stage chronic kidney disease detection and personalized risk management.</p>
+          <div class="social-icon-list">
+            <a href="#" target="_blank" class="social-icon-link card" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" class="social-icon-link card" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" class="social-icon-link card" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" class="social-icon-link card" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-column-2">
+          <h4>Our Platform</h4>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">For Patients</a></li>
+            <li><a href="#">For Healthcare Providers</a></li>
+            <li><a href="#">Our Technology</a></li>
+          </ul>
+        </div>
+        <div class="footer-column-3">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="{{ url_for('info') }}#what">What is CKD?</a></li>
+            <li><a href="{{ url_for('info') }}#precautions">Prevention Protocol</a></li>
+            <li><a href="#">Educational Library</a></li>
+            <li><a href="#">Blog & News</a></li>
+            <li><a href="#">Patient Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-column-4">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Press & Media</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column-5">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">HIPAA Compliance</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p>&copy; 2025 KidneyClear AI. All rights reserved. This information is for educational purposes and not a substitute for professional medical advice.</p>
+        <div class="made-by-tag">
+          <span>Made by</span> <strong>BKP and SA</strong>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>
