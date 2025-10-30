@@ -112,7 +112,7 @@ body {
 }
 .confidence-score p {
     font-size: 0.9rem;
-    color: #a0c4ff; /* Light blue accent */
+    color: black; /* Light blue accent */
     margin: 0;
 }
 .confidence-score p strong {
