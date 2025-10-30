@@ -16,8 +16,10 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo-brand">
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
-      <span>Predict CKD</span>
+      <a href="home.html">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+      </a>
+      <a href="home.html" ><span>KidneyClear AI</span></a>
     </div>
     <ul class="nav-links">
       <li><a href="{{ url_for('home') }}">Home</a></li>

@@ -43,13 +43,17 @@ body {
     transition: transform 0.3s ease;
 }
 .logo-brand img:hover {
-    transform: rotate(5deg) scale(1.05);
+    transform: rotate(1deg) scale(1.05);
 }
 .logo-brand span { 
     font-weight: 700; 
     font-size: 1.8rem; 
     color: #ffffff;
     letter-spacing: 1px;
+}
+
+.logo-brand a{
+    text-decoration: none;
 }
 
 /* 🌠 NAV LINKS */
