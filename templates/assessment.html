@@ -15,19 +15,20 @@
         <form action="/predict" method="POST">
             <h2>CKD Risk Assessment</h2>
             <p>Please fill out the fields below for a preliminary analysis.</p>
+            <p>Please enter your detail as per your test report</p>
 
             <div class="form-group">
-                <label for="bu"><i class="fas fa-hourglass-half"></i> Blood Urea</label>
+                <label for="bu"><i class="fas fa-hourglass-half"></i> Enter Your Blood Urea Level</label>
                 <input type="number" id="bu" name="bu" placeholder="e.g., 55" required>
             </div>
 
             <div class="form-group">
-                <label for="bgr"><i class="fas fa-heartbeat"></i> Blood Glucose Random</label>
+                <label for="bgr"><i class="fas fa-heartbeat"></i> Enter your Blood Glucose Random Level</label>
                 <input type="number" id="bgr" name="bgr" placeholder="e.g., 140 (the top number)" required>
             </div>
 
             <div class="form-group">
-                <label for="ane"><i class="fas fa-tint"></i> Anemia</label>
+                <label for="ane"><i class="fas fa-tint"></i> Do you have deficiency of Anemia</label>
                 <select id="ane" name="ane">
                     <option value="0">No</option>
                     <option value="1">Yes</option>
@@ -35,7 +36,7 @@
             </div>
 
             <div class="form-group">
-                <label for="cad"><i class="fas fa-users"></i> Coronary Artery Disease</label>
+                <label for="cad"><i class="fas fa-users"></i>Do you have Coronary Artery Disease</label>
                 <select id="cad" name="cad">
                     <option value="0">No</option>
                     <option value="1">Yes</option>
@@ -43,7 +44,7 @@
             </div>
 
             <div class="form-group">
-                <label for="pc"><i class="fas fa-smoking"></i> Pus Cell</label>
+                <label for="pc"><i class="fas fa-smoking"></i> Please select your pus cell status</label>
                 <select id="pc" name="pc">
                     <option value="0">Normal</option>
                     <option value="1">Abnormal</option>
@@ -51,15 +52,15 @@
             </div>
 
             <div class="form-group">
-                <label for="rbc"><i class="fas fa-smoking"></i> Red Blood Cell</label>
+                <label for="rbc"><i class="fas fa-smoking"></i> Please Select your RBC status (as per your test report)</label>
                 <select id="rbc" name="rbc">
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
+                    <option value="0">Normal</option>
+                    <option value="1">Abnormal</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="dm"><i class="fas fa-smoking"></i> Diabetes Mellitus</label>
+                <label for="dm"><i class="fas fa-smoking"></i> Do you have Diabetes Mellitus</label>
                 <select id="dm" name="dm">
                     <option value="0">No</option>
                     <option value="1">Yes</option>
@@ -67,7 +68,7 @@
             </div>
 
             <div class="form-group">
-                <label for="pe"><i class="fas fa-smoking"></i> Pedal Edema</label>
+                <label for="pe"><i class="fas fa-smoking"></i> Do you have Pedal Edema (swelling in the feet or ankles)</label>
                 <select id="pe" name="pe">
                     <option value="0">No</option>
                     <option value="1">Yes</option>
