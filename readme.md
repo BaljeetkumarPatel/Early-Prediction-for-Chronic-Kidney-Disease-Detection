@@ -149,7 +149,6 @@ Four different models were trained on the preprocessed data:
 
 
 ## Screenshots
-
 ![App Screenshot](static/screenshot/home.png)
 ![App Screenshot](static/screenshot/ckd1.png)
 ![App Screenshot](static/screenshot/ckd2.png)
@@ -163,7 +162,6 @@ Four different models were trained on the preprocessed data:
 ![App Screenshot](static/screenshot/assessment2.png)
 ![App Screenshot](static/screenshot/result_low_risk.png)
 ![App Screenshot](static/screenshot/result_high_risk.png)
-
 
 
 ## Results
