@@ -150,7 +150,7 @@ Four different models were trained on the preprocessed data:
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Home page_hero_section](static/screenshot/home.png)
 
 
 ## Results
