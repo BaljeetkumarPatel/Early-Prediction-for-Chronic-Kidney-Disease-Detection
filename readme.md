@@ -151,6 +151,19 @@ Four different models were trained on the preprocessed data:
 ## Screenshots
 
 ![Home page_hero_section](static/screenshot/home.png)
+![App Screenshot](static/screenshot/ckd1.png)
+![App Screenshot](static/screenshot/ckd2.png)
+![App Screenshot](static/screenshot/prevention.png)
+![App Screenshot](static/screenshot/risk.png)
+![App Screenshot](static/screenshot/library.png)
+![App Screenshot](static/screenshot/riskmatter.png)
+![App Screenshot](static/screenshot/info.png)
+![App Screenshot](static/screenshot/contact.png)
+![App Screenshot](static/screenshot/assessment1.png)
+![App Screenshot](static/screenshot/assessment2.png)
+![App Screenshot](static/screenshot/result_low_risk.png)
+![App Screenshot](static/screenshot/result_high_risk.png)
+
 
 
 ## Results
