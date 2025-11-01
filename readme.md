@@ -152,8 +152,11 @@ Four different models were trained on the preprocessed data:
 
 ![Home page_hero_section](static/screenshot/home.png)
 ![App Screenshot](static/screenshot/ckd.jpg)
+<<<<<<< HEAD
 ![App Screenshot](static/screenshot/ckd1.png)
 ![App Screenshot](static/screenshot/ckd2.png)
+=======
+>>>>>>> 0fa320ff3079191fd24f8c291e6aab33243700c9
 ![App Screenshot](static/screenshot/prevention.png)
 ![App Screenshot](static/screenshot/risk.png)
 ![App Screenshot](static/screenshot/library.png)
