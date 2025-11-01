@@ -151,6 +151,7 @@ Four different models were trained on the preprocessed data:
 ## Screenshots
 
 ![Home page_hero_section](static/screenshot/home.png)
+![App Screenshot](static/screenshot/ckd.jpg)
 ![App Screenshot](static/screenshot/ckd1.png)
 ![App Screenshot](static/screenshot/ckd2.png)
 ![App Screenshot](static/screenshot/prevention.png)
