@@ -157,10 +157,11 @@ Four different models were trained on the preprocessed data:
 ![App Screenshot](static/screenshot/risk.png)
 ![App Screenshot](static/screenshot/library.png)
 ![App Screenshot](static/screenshot/riskmatter.png)
-![App Screenshot](static/screenshot/info.png)
+![App Screenshot](static/screenshot/info_1.png)
+![App Screenshot](static/screenshot/info_2.png)
+![App Screenshot](static/screenshot/info_3.png)
 ![App Screenshot](static/screenshot/contact.png)
 ![App Screenshot](static/screenshot/assessment.png)
-![App Screenshot](static/screenshot/assessment2.png)
 ![App Screenshot](static/screenshot/result_low_risk.png)
 ![App Screenshot](static/screenshot/result_high_risk.png)
 
