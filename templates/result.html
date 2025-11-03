@@ -23,16 +23,31 @@
             <div class="icon-wrapper risk">
                 <i class="fas fa-exclamation-triangle"></i>
             </div>
-            <h2>High Risk Detected</h2>
+            <h2>Oops !</h2>
+            <h2>you have Chronic dieases</h2>
             <p>Our analysis indicates a high probability of Chronic Kidney Disease based on the provided data. Please consult a healthcare professional for a complete diagnosis and guidance.</p>
+            <div class="extra-section">
+                <img src="{{ url_for('static', filename='oops.jpg') }}" alt="Oops Image" class="result-image">
+                <a href="https://www.practo.com/" target="_blank" class="doctor-btn">
+                    <i class="fas fa-user-md"></i> Consult with a Doctor
+                </a>
+            </div>
         
         {% else %}
             <div class="icon-wrapper safe">
                 <i class="fas fa-check-circle"></i>
             </div>
-            <h2>Low Risk Detected</h2>
+            <h2>Wow!</h2>
+            <h2>You are not affected with chronic diseases</h2>
             <p>Our analysis indicates a low probability of Chronic Kidney Disease based on the provided data. We still recommend regular check-ups and maintaining a healthy lifestyle.</p>
-        
+
+            <!-- ✅ Added Button to Go to Prevention Section -->
+            <div class="extra-section">
+                <img src="{{ url_for('static', filename='wow.jpg') }}" alt="Oops Image" class="result-image">
+                <a href="{{ url_for('home') }}#prevention" class="prevention-btn">
+                    <i class="fas fa-shield-heart"></i> PLease follow prevention tips to stay safe
+                </a>
+            </div>
         {% endif %}
         
         {% if confidence_score is not none %}

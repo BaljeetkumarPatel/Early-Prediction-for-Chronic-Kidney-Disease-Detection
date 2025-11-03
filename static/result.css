@@ -146,3 +146,59 @@ body {
 .back-btn i {
     margin-right: 8px;
 }
+
+
+/* --- Extra Section (Oops image + Consult button) --- */
+.extra-section {
+    text-align: center;
+    margin-top: 30px;       /* Increased spacing above to avoid overlap */
+    margin-bottom: 30px;    /* Ensures clear space before confidence score */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.result-image {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(244, 67, 54, 0.6);
+}
+
+.doctor-btn {
+    background: linear-gradient(to right, #dc2626, #ef4444);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.doctor-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+    background: linear-gradient(to right, #b91c1c, #dc2626);
+}
+
+/* --- Confidence Score Spacing Adjustments --- */
+.confidence-score {
+    margin-top: 20px !important;  /* ensures gap after doctor section */
+    margin-bottom: 25px;
+    text-align: center;
+}
